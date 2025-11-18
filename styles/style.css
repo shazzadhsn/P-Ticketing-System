@@ -67,3 +67,28 @@ hr {
 .bdt {
     color: #1DD100;
 }
+.available-seat {
+    color: #03071280;
+}
+.selected-seat {
+    color: #1DD100;
+}
+.seat-numbers {
+    font-size: 1.25rem;
+    border-radius: 10px;
+    background-color: #F7F8F8;
+    padding: 5px;
+    width: 80px;
+}
+.seat-numbers:hover {
+    cursor: pointer;
+}
+.seat-letter {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.25rem;
+}
+.divider {
+    border-right: 2px dashed rgba(3, 7, 18, 0.30);
+}
