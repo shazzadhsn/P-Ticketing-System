@@ -4,17 +4,74 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>P-Ticketing System</title>
-        
+
         <!-- Vanilla CSS -->
-        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/style.css" />
 
         <!-- Tailwind & Daisyui -->
         <link
-            href="https://cdn.jsdelivr.net/npm/daisyui@5"rel="stylesheet"type="text/css"/>
-            <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <header></header>
+        <header>
+            <!-- nav bar section -->
+            <div class="navbar bg-base-100 shadow-sm">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div
+                            tabindex="0"
+                            role="button"
+                            class="btn btn-ghost lg:hidden"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16"
+                                />
+                            </svg>
+                        </div>
+                        <ul
+                            tabindex="-1"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-lg"
+                        >
+                            <li><a class="text-md font-bold" href="#">Home</a></li>
+                            <li><a class="text-md font-bold" href="#">About</a></li>
+                            <li><a class="text-md font-bold" href="#">Destination</a></li>
+                            <li><a class="text-md font-bold" href="#">Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-3xl font-extrabold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 gap-10">
+                        <li><a class="text-lg font-medium" href="#">Home</a></li>
+                        <li><a class="text-lg font-medium" href="#">About</a></li>
+                        <li><a class="text-lg font-medium" href="#">Destination</a></li>
+                        <li><a class="text-lg font-medium" href="#">Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="bus-btn btn py-4 px-8">Bus <i class="fa-solid fa-bus-side"></i></a>
+                </div>
+            </div>
+
+            
+        </header>
         <main></main>
         <footer></footer>
     </body>
