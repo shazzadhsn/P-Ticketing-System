@@ -10,3 +10,12 @@
     border: 1px solid rgba(29, 209, 0, 0.40);
     color: #1DD100;
 }
+
+.header-green-text {
+    color: #1DD100;
+}
+
+.buy-ticket-btn {
+    background-color: #1DD100;
+    color: black;
+}

@@ -17,7 +17,13 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
     </head>
     <body>
         <header>
@@ -49,30 +55,75 @@
                             tabindex="-1"
                             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-lg"
                         >
-                            <li><a class="text-md font-bold" href="#">Home</a></li>
-                            <li><a class="text-md font-bold" href="#">About</a></li>
-                            <li><a class="text-md font-bold" href="#">Destination</a></li>
-                            <li><a class="text-md font-bold" href="#">Search</a></li>
+                            <li>
+                                <a class="text-md font-bold" href="#">Home</a>
+                            </li>
+                            <li>
+                                <a class="text-md font-bold" href="#">About</a>
+                            </li>
+                            <li>
+                                <a class="text-md font-bold" href="#"
+                                    >Destination</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-md font-bold" href="#">Search</a>
+                            </li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-3xl font-extrabold">P-Ticket</a>
+                    <a class="btn btn-ghost text-3xl font-extrabold"
+                        >P-Ticket</a
+                    >
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 gap-10">
-                        <li><a class="text-lg font-medium" href="#">Home</a></li>
-                        <li><a class="text-lg font-medium" href="#">About</a></li>
-                        <li><a class="text-lg font-medium" href="#">Destination</a></li>
-                        <li><a class="text-lg font-medium" href="#">Search</a></li>
+                        <li>
+                            <a class="text-lg font-medium" href="#">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-lg font-medium" href="#">About</a>
+                        </li>
+                        <li>
+                            <a class="text-lg font-medium" href="#"
+                                >Destination</a
+                            >
+                        </li>
+                        <li>
+                            <a class="text-lg font-medium" href="#">Search</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="bus-btn btn py-4 px-8">Bus <i class="fa-solid fa-bus-side"></i></a>
+                    <a class="bus-btn btn py-4 px-8"
+                        >Bus <i class="fa-solid fa-bus-side"></i
+                    ></a>
                 </div>
             </div>
 
-            
+            <!-- hero section -->
+            <div
+                class="hero w-11/12 rounded-4xl mx-auto my-10 h-90 lg:h-140 xl:h-160 2xl:h-170 2xl:w-8/12"
+                style="
+                    background-image: url(./images/banner.png);
+                "
+            >
+                <div class="hero-content text-neutral-content text-center rounded-4xl">
+                    <div class="w-full">
+                        <h1 class="mb-5 font-bold text-3xl md:text-5xl lg:text-6xl">End-to-End Travel with<br><span class="header-green-text">P Paribahan</span></h1>
+                        <p class="mb-5 mx-auto w-9/12 font-normal xl:w-5/12">
+                            Provident cupiditate voluptatem et in. Quaerat
+                            fugiat ut assumenda excepturi exercitationem quasi.
+                            In deleniti eaque aut repudiandae et a id nisi.
+                        </p>
+                        <button class="buy-ticket-btn btn btn-primary border-none font-bold text-base px-6 py-4">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
         </header>
         <main></main>
         <footer></footer>
+
+        <!-- Script File -->
+        <script src="./script.js"></script>
     </body>
 </html>
