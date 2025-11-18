@@ -38,3 +38,32 @@
     border-color: #1DD100;
     color: #1DD100;
 }
+.functional-section {
+    background-color: #F7F8F8;
+    border-color: #1DD100;
+}
+
+.registered-users, .ticket-sold, .rental-partners {
+    border-color: #1DD100;
+}
+
+.transport-seat {
+    background-color: rgba(29, 209, 0, 0.15);
+    border-color: #1DD100;
+    color: #1DD100;
+}
+.transport-departure-details {
+    background-color: #F7F8F8;
+}
+.boarding-btns {
+    background-color: rgba(3, 7, 18, 0.05);
+}
+hr {
+    border-top: 1px dashed black;
+}
+.vertical-line {
+    border-right: 3px dashed #1DD100
+}
+.bdt {
+    color: #1DD100;
+}
