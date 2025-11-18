@@ -19,3 +19,22 @@
     background-color: #1DD100;
     color: black;
 }
+.achievement-icons {
+    color: #1DD100;
+}
+
+.coupon-sticker {
+    background-color: #FFBF0F;
+}
+
+.text3 {
+    color: rgba(3, 7, 18, 0.80);
+}
+.coupon-sticker2 {
+    background-color: #F78C9C;
+}
+
+.all-offer-btn {
+    border-color: #1DD100;
+    color: #1DD100;
+}
