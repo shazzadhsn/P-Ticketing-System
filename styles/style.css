@@ -115,3 +115,19 @@ hr {
 .footer-hr {
     background-color: white;
 }
+
+.success-icon {
+    color: #27AE60
+}
+.success-green {
+    color: #27AE60;
+}
+.continue-btn {
+    background-color: #27AE60;
+}
+.success-body {
+    background-color: #F2F1F1;
+}
+.success-page {
+    background-color: white;
+}
