@@ -131,3 +131,9 @@ hr {
 .success-page {
     background-color: white;
 }
+#next-btn-success:hover {
+    cursor: pointer;
+}
+#continue-btns:hover {
+    cursor: pointer;
+}
