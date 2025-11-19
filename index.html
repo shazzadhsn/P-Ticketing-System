@@ -195,7 +195,7 @@
                                 <p class="text-base">Coach-009-WEB ! AC_Business</p>
                             </div>
                         </div>
-                        <button class="transport-seat border-1 p-2 text-base font-semibold rounded-xl"><i class="text-xl fa-solid fa-chair"></i> 40 Seats Left</button>
+                        <button class="transport-seat border-1 p-2 text-base font-semibold rounded-xl"><i class="text-xl fa-solid fa-chair"></i> <span id="remaining-seat-count">40</span> Seats Left</button>
                     </div>
                     <div class="transport-departure-details h-92 md:h-68 lg:h-58 w-11/12 md:w-11/12 mx-auto rounded-3xl">
                         <div class="departure-text-1 flex justify-around my-5 pt-5 md:justify-between md:px-5">
@@ -218,7 +218,7 @@
                 <div class="vertical-line border-r-xl h-full hidden lg:block"></div>
                 <div class="ticket-price flex flex-col text-center items-center">
                     <i class="text-2xl fa-solid fa-bangladeshi-taka-sign bdt"></i>
-                    <p class="font-bold text-3xl">550 Taka</p>
+                    <p class="font-bold text-3xl"><span id="per-seat-price">550</span> Taka</p>
                     <p class="font-medium text-xl">Per Seat</p>
                 </div>
                 </section>
@@ -305,10 +305,8 @@
                                 <h4 class="seat-price font-semibold text-base">Price</h4>
                             </div>
                             <hr class="mx-5 my-5">
-                            <div class="pricing-details">
-                                <div class="flex justify-between mx-5">
-                                    
-                                </div>
+                            <div id="detailed-price" class="pricing-details">
+                                
                             </div>
                             <hr class="mx-5 my-5">
                             <div class="price-ending flex justify-between mx-5">
@@ -317,7 +315,7 @@
                             </div>
                             <div class="coupon-field flex flex-col">
                                 <input class="bg-white border-none rounded-xl mx-5 h-14 pl-5 my-5" type="text" placeholder="Have any coupon?">
-                                <button class="apply-btn text-white font-semibold text-xl mx-5 p-2 rounded-xl">Apply</button>
+                                <button id="apply-button" disabled class="apply-btn text-white font-semibold text-xl mx-5 p-2 rounded-xl">Apply</button>
                             </div>
                             <div class="grand-total-price flex justify-between mx-5 my-5 pb-5">
                                 <p class="font-semibold text-base">Grand Total</p>
