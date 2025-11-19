@@ -1,5 +1,5 @@
 // Global Variable declaration
-let seatNum, seatPrice, seatCount = 0;;
+let seatNum, seatPrice, seatCount = 0, totalPrice = 0, grandTotalPrice = 0;
 function elementPickerById(elementId) {
     let element = document.getElementById(elementId);
     return element;
@@ -9,7 +9,6 @@ for(let seatNumber of seatNumbers) {
     seatNumber.addEventListener('click', function(event) {
 
         // functionality 2
-        console.log(event.target.classList.contains('selected'));
         
         if(event.target.classList.contains('selected')) {
             removeSeatList(event);
@@ -17,12 +16,14 @@ for(let seatNumber of seatNumbers) {
             event.target.classList.remove('!bg-green-500', 'selected', 'text-white')
             seatCount--;
             seatListCount();
+            priceMinusCalculation();
             
         } else {
             seatSelection(event);
             listingSeats(event);
             seatCount++;
             seatListCount();
+            priceAddCalculation();
         }
     })
 }
@@ -62,12 +63,15 @@ function seatSelection(event) {
     event.target.classList.add('selected', '!bg-green-500', 'text-white');
 }
 
+
+// Seat List Calculation
 let couponApplyBtn, remainingSeat;
+couponApplyBtn = elementPickerById('apply-button');
 function seatListCount() {
     remainingSeat = elementPickerById('remaining-seat-count');
     remainingSeat.innerText = 40 - seatCount;
+    elementPickerById('count-seat').innerText = seatCount;
     if(seatCount == 4) {
-        couponApplyBtn = elementPickerById('apply-button');
         couponApplyBtn.removeAttribute('disabled');
         for(let seatNumber of seatNumbers) {
             if(seatNumber.classList.contains('selected') == false) {
@@ -82,4 +86,52 @@ function seatListCount() {
             }
         }
     }
+}
+
+let totalPriceValue, grandTotalValue;
+grandTotalValue = elementPickerById('grand-total-price-value');
+totalPriceValue = elementPickerById('total-price-value');
+
+// coupon apply
+couponApplyBtn.addEventListener('click', function() {
+    applyCouponCode();
+})
+
+// Price Calculation
+
+function priceAddCalculation() {
+    totalPrice += seatPrice;
+    totalPriceValue.innerText = totalPrice;
+    grandTotal = totalPrice;
+    grandTotalValue.innerText = totalPrice;
+}
+function priceMinusCalculation() {
+    totalPrice -= seatPrice;
+    totalPriceValue.innerText = totalPrice;
+    grandTotal = totalPrice;
+    grandTotalValue.innerText = totalPrice;
+}
+
+
+let new15CouponCode = 'NEW15';
+let coupleCouponCode = 'COUPLE20';
+let couponCode;
+
+// coupon apply function define
+function applyCouponCode() {
+    couponCode = elementPickerById('coupon-code-place-field').value;
+    if(couponCode === new15CouponCode) {
+        grandTotal = grandTotal - grandTotal * 0.15;
+        grandTotalValue.innerText = grandTotal;
+        elementPickerById('coupon-code-place-field').setAttribute('disabled', true);
+        couponApplyBtn.setAttribute('disabled', true);
+    } else if(couponCode === coupleCouponCode) {
+        grandTotal = grandTotal - grandTotal * 0.20;
+        grandTotalValue.innerText = grandTotal;
+        elementPickerById('coupon-code-place-field').setAttribute('disabled', true);
+        couponApplyBtn.setAttribute('disabled', true);
+    } else {
+        alert('Wrong Coupon Code Entered');
+    }
+    elementPickerById('coupon-code-place-field').value = '';
 }
